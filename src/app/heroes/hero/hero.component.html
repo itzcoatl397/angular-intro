@@ -1,0 +1,42 @@
+
+<h1 class="text-2xl font-bold   "> {{name}} </h1>
+
+  <dl class="space-y-3">
+    <td>Nombre:</td>
+    <dd  >{{name}}</dd>
+
+
+    <td>Edad:</td>
+    <dd>{{age}}</dd>
+
+    <td>Metodo:</td>
+    <dd>{{getHeroDescription()}}</dd>
+
+    <td>Capitalizado :</td>
+    <dd>{{CapitalizeName}}</dd>
+    
+  </dl>
+
+ <div class="space-x-3   ">
+    <button *ngIf="name !== 'Ironman'"  
+     (click)="changeHero()"  
+    class="border  p-3  bg-indigo-800 text-white font-extrabold mt-5 
+     rounded-2xl cursor-pointer" >
+        Cambiar Nombre
+      </button>
+    
+      <button 
+      *ngIf="age != 50"
+      
+      (click)="changeAge()" class="border p-3 bg-indigo-600 text-white font-extrabold rounded-2xl w-fit cursor-pointer">
+        Cambiar Edad
+      </button>
+
+
+      <button 
+      
+      
+      (click)="resetForm()" class="border p-3 bg-indigo-600 text-white font-extrabold rounded-2xl w-fit cursor-pointer">
+        Reset
+      </button>
+ </div>
