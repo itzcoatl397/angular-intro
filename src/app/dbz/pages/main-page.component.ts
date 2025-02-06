@@ -42,4 +42,14 @@ export class MainPageComponent {
 
   ]
 
+  onNewCharacter(character:Character){
+
+
+
+
+    this.characters.push(character);
+
+    console.log(character);
+  }
+
 }
